@@ -22,4 +22,9 @@ public class AdServer {
         String adsterraAdUrl = "http://pl26780328.profitableratecpm.com/2e/7b/58/2e7b58d34093cfaae6a3392a1b1d6043";
         return new ResponseEntity<>("{\"ad_url\": \"" + adsterraAdUrl + "\"}", HttpStatus.OK);
     }
+
+@GetMapping("/ping")
+public ResponseEntity<String> ping() {
+    return ResponseEntity.ok("{\"status\":\"ok\"}");
+}
 }
